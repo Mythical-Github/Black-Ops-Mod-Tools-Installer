@@ -49,6 +49,8 @@ A: If you've read everything here, and googled what you can, and it's still not 
 	Credits:
 SE2Dev (Linker_Mod/Game_Mod/wip Asset Package)
 Nukem9 (Linker_Mod/Game_Mod)
+Jbleezy (Linker_Mod/Game_Mod)\
+dtzxporter (Linker_Mod/Game_Mod)\
 Ville88 (Mod Tools Fix)
 Treyarch & Activision (Game)
 Valve (SteamCMD)
