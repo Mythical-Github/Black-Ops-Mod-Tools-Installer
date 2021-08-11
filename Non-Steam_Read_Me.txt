@@ -1,9 +1,9 @@
-BO1 Linker_Mod Installer by Mythical (Version 1.0):
+BO1 Linker_Mod Installer by Mythical (Version 1.2.2):
 
 	Notes:
 
 Some errors/warning when the converter is ran is normal, you can ignore them.
-This will add approximately 181 MB to your game/mod tools install.
+This will add approximately 281 MB to your game/mod tools install.
 It is reccomended to keep your game install separate from your modding install, but not neccesary.
 
 	Requirements:

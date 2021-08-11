@@ -1,8 +1,8 @@
-BO1 Game + Mod Tools + Linker_Mod Installer by Mythical (Version 1.0):
+BO1 Game + Mod Tools + Linker_Mod Installer by Mythical (Version 1.2.2):
 
 	Notes:
 Some errors/warning when the converter is ran is normal, you can ignore them.
-This will take up 12-13gb.
+This will take up 12-14gb.
 It is reccomended to keep your game install separate from your modding install, but not neccesary.
 
 	Requirements:
