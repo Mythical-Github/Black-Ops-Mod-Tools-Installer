@@ -1,5 +1,5 @@
 # Black-Ops-Mod-Tools-Installer
-Scripts that automate the install and setup of Black Ops 1 Mod tools, Linker_Mod, Asset Package, and Mod Tools Fix\
+Script to automate the install and setup of the Black Ops Mod Tools, their fixes, and more\
 Download and run the latest release from here:\
 https://github.com/Mythical-Github/Black-Ops-Mod-Tools-Installer/releases
 
