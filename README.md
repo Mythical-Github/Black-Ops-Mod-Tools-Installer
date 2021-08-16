@@ -4,6 +4,9 @@ Download and run the latest release from here:\
 https://github.com/Mythical-Github/Black-Ops-Mod-Tools-Installer/releases
 
 ![Preview:](https://cdn.discordapp.com/attachments/868600140880023592/876044651717591081/Black_Ops_Mod_Tools_Installer_Example.PNG)
+
+Video Tutorial by 5and5:\
+https://www.youtube.com/watch?v=PoeU7zFN2WM
  
 If you have any questions feel free to ask me in the Linkermod Discord's help channel.
 
