@@ -4,11 +4,6 @@ Download and run the latest release from here:\
 https://github.com/Mythical-Github/Black-Ops-Mod-Tools-Installer/releases
 
 ![Preview:](https://cdn.discordapp.com/attachments/868600140880023592/876044651717591081/Black_Ops_Mod_Tools_Installer_Example.PNG)
-
-Requirements:\
-Windows 7 or higher\
-If below Windows 10 you may have to install the following to update powershell first:\
-https://www.microsoft.com/en-us/download/details.aspx?id=54616
  
 If you have any questions feel free to ask me in the Linkermod Discord's help channel.
 
