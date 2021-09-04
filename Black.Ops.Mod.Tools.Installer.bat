@@ -40,7 +40,7 @@ echo Important Notes:
 echo.
 echo The Steam method (uses steamcmd) is no longer available, you can self reactivate it if you'd like, but this is only for advanced users.
 echo The Non-Steam method is the reccomended method.
-echo You can use the Non-Steam method with an existing Steam Game + Mod Tools install.
+echo You can use the Non-Steam method with an existing Steam Base Game, Multiplayer, and Mod Tools (any dlc you own will be autoinstalled).
 echo.
 echo Having Bgamer installed can replace key files, if you are having issues check this first
 echo.
