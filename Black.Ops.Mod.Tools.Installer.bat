@@ -61,10 +61,9 @@ echo Now to get started
 echo.
 
 :a
-echo Enter Non-Steam to continue?
 rem echo Are you using Steam or Non-Steam?
 echo.
-set /p ans="Enter "Non-Steam":"
+set /p ans="Enter "Non-Steam" to continue:"
 rem set /p ans="Enter "Steam" or "Non-Steam":"
 echo.
 rem if %ans%==Steam (goto b)
