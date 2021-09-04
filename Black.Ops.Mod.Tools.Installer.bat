@@ -38,9 +38,9 @@ echo It will also run the setup.bat, converter, and clean up unneeded files
 echo.
 echo Important Notes:
 echo.
-echo The Steam method will require inputting your steam username and password for steamcmd.
-echo The Non-Steam method won't.
-echo You can use the Non-Steam method with an existing steam Game + Mod Tools install.
+echo The Steam method (uses steamcmd) is no longer available, you can self reactivate it if you'd like, but this is only for advanced users.
+echo The Non-Steam method is the reccomended method.
+echo You can use the Non-Steam method with an existing Steam Game + Mod Tools install.
 echo.
 echo Some errors/warning when the converter is ran is normal, you can ignore them.
 echo Don't run the converter yourself unless you're absolutely sure.
@@ -59,17 +59,20 @@ echo Now to get started
 echo.
 
 :a
-echo Are you using Steam or Non-Steam?
+echo Enter Non-Steam to continue?
+rem echo Are you using Steam or Non-Steam?
 echo.
-set /p ans="Enter "Steam" or "Non-Steam":"
+set /p ans="Enter "Non-Steam":"
+rem set /p ans="Enter "Steam" or "Non-Steam":"
 echo.
-if %ans%==Steam (goto b)
-if %ans%==steam (goto b)
-if %ans%==Non-Steam (goto b)
-if %ans%==NonSteam (goto b)
+rem if %ans%==Steam (goto b)
+rem if %ans%==steam (goto b)
+rem if %ans%==Non-Steam (goto b)
+rem if %ans%==NonSteam (goto b)
 if %ans%==non-steam (goto b)
 if %ans%==nonsteam (goto b)
-echo Your input was something other than "Steam" or "Non-Steam".
+echo Your input was something other than "Non-Steam"
+rem echo Your input was something other than "Steam" or "Non-Steam"
 echo Try again.
 echo.
 goto a
@@ -84,8 +87,8 @@ powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/atta
 powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/874819090873724969/CoD_BO_Mod_Tools_Fix_1-1.4.1_updated_part_2.zip"
 powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/875995770296336434/End_Message.txt"
 powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/876022149473767494/BO_FTG_Map_Source.zip"
-if %ans%==Steam (goto c)
-if %ans%==steam (goto c)
+rem if %ans%==Steam (goto c)
+rem if %ans%==steam (goto c)
 if %ans%==Non-Steam (goto d)
 if %ans%==NonSteam (goto d)
 if %ans%==non-steam (goto d)
@@ -119,10 +122,10 @@ cd ".."
 goto e
 
 :e
-start steam://rungameid/42700
-Timeout /T 45
-taskkill /f /im BlackOps.exe
-Timeout /T 15
+rem start steam://rungameid/42700
+rem Timeout /T 45
+rem taskkill /f /im BlackOps.exe
+rem Timeout /T 15
 call BlackOps.exe
 Timeout /T 45
 taskkill /f /im BlackOps.exe
