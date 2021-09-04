@@ -42,6 +42,8 @@ echo The Steam method (uses steamcmd) is no longer available, you can self react
 echo The Non-Steam method is the reccomended method.
 echo You can use the Non-Steam method with an existing Steam Game + Mod Tools install.
 echo.
+echo Having Bgamer installed can replace key files, if you are having issues check this first
+echo.
 echo Some errors/warning when the converter is ran is normal, you can ignore them.
 echo Don't run the converter yourself unless you're absolutely sure.
 echo It has the potential to delete files you may want to keep.
