@@ -68,8 +68,8 @@ rem set /p ans="Enter "Steam" or "Non-Steam":"
 echo.
 rem if %ans%==Steam (goto b)
 rem if %ans%==steam (goto b)
-rem if %ans%==Non-Steam (goto b)
-rem if %ans%==NonSteam (goto b)
+if %ans%==Non-Steam (goto b)
+if %ans%==NonSteam (goto b)
 if %ans%==non-steam (goto b)
 if %ans%==nonsteam (goto b)
 echo Your input was something other than "Non-Steam"
