@@ -5,6 +5,7 @@ echo Checking for updates...
 powershell -Command "Start-BitsTransfer -Source "https://github.com/Mythical-Github/Black-Ops-Mod-Tools-Installer/releases/download/vStatic/Black.Ops.Mod.Tools.Installer.bat"
 cls
 if not "%1" == "max" start /MAX cmd /c %0 max & exit/b
+cd %~dp0
 cls
 echo.
 echo                                    #     #                                           ###                                              
