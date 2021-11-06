@@ -26,5 +26,5 @@ Synthetic Programming (Youtube Coding Tutorial and Example Code)\
 Inferno Maartem (Creator of WaW FTG Map)\
 patorjk.com (Ascii Art)
 
-Donations (Always optional, never needed!):\
+Donations:\
 https://www.patreon.com/Mythical_4_Patreon
