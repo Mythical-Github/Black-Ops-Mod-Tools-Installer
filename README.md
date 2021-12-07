@@ -8,11 +8,8 @@ https://www.youtube.com/watch?v=PoeU7zFN2WM
  
 If you have any questions feel free to ask me in the Linkermod Discord's help channel.
 
-My Discord Contact Info (you can add me this way):\
+My Discord Contact Info (you can talk to me this way):\
 𝓜𝔂𝓽𝓱𝓲𝓬𝓪𝓵#4914
-
-Linkermod Discord:\
-https://discord.gg/RMt88x3Js4
 
 Credits:\
 SE2Dev (Linker_Mod/Game_Mod/wip Asset Package)\
@@ -28,6 +25,9 @@ Synthetic Programming (Youtube Coding Tutorial and Example Code)\
 5and5 (FTG BO Map Source Example and Video Tutorial)\
 Inferno Maartem (Creator of WaW FTG Map)\
 patorjk.com (Ascii Art)
+
+Linkermod Discord:\
+https://discord.gg/RMt88x3Js4
 
 Donations:\
 https://www.patreon.com/Mythical_4_Patreon
