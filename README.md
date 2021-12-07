@@ -8,6 +8,9 @@ https://www.youtube.com/watch?v=PoeU7zFN2WM
  
 If you have any questions feel free to ask me in the Linkermod Discord's help channel.
 
+My Discord Contact Info (you can add me this way):\
+𝓜𝔂𝓽𝓱𝓲𝓬𝓪𝓵#4914
+
 Linkermod Discord:\
 https://discord.gg/RMt88x3Js4
 
