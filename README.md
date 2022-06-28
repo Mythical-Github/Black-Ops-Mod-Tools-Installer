@@ -24,7 +24,9 @@ Rik from SuperUser.com (Maximized Window Code Snippet)\
 Synthetic Programming (Youtube Coding Tutorial and Example Code)\
 5and5 (FTG BO Map Source Example and Video Tutorial)\
 Inferno Maartem (Creator of WaW FTG Map)\
-patorjk.com (Ascii Art)
+patorjk.com (Ascii Art)\
+ss64.com (Batch Command List)\
+ribbitpoison (T5-MissingAssets)
 
 Linkermod Discord:\
 https://discord.gg/RMt88x3Js4
