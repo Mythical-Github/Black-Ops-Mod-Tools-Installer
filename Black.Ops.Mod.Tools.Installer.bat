@@ -89,6 +89,7 @@ powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/atta
 powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/874819090873724969/CoD_BO_Mod_Tools_Fix_1-1.4.1_updated_part_2.zip"
 powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/875995770296336434/End_Message.txt"
 powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/876022149473767494/BO_FTG_Map_Source.zip"
+powershell -Command "Start-BitsTransfer -Source "https://codeload.github.com/ribbitpoison/T5-MissingAssets/zip/refs/heads/main"
 rem if %ans%==Steam (goto c)
 rem if %ans%==steam (goto c)
 if %ans%==Non-Steam (goto d)
@@ -141,6 +142,7 @@ powershell -Command "Expand-Archive -Force -LiteralPath assets_wip_0.1.0.zip -De
 powershell -Command "Expand-Archive -Force -LiteralPath CoD_BO_Mod_Tools_Fix_1-1.4.1_updated_part_1.zip -DestinationPath "..""
 powershell -Command "Expand-Archive -Force -LiteralPath CoD_BO_Mod_Tools_Fix_1-1.4.1_updated_part_2.zip -DestinationPath "..""
 powershell -Command "Expand-Archive -Force -LiteralPath BO_FTG_Map_Source.zip -DestinationPath "..""
+powershell -Command "Expand-Archive -Force -LiteralPath T5-MissingAssets-main.zip -DestinationPath "..""
 echo.
 echo 	Credits:
 echo SE2Dev (Linker_Mod/Game_Mod/wip Asset Package)
@@ -148,7 +150,7 @@ echo Nukem9 (Linker_Mod/Game_Mod)
 echo Jbleezy (Linker_Mod/Game_Mod)
 echo dtzxporter (Linker_Mod/Game_Mod)
 echo Ville88 (Mod Tools Fix)
-echo Treyarch & Activision (Game)
+echo Treyarch and Activision (Game)
 echo Valve (SteamCMD)
 echo Marcin Glinski (Ascii Art)
 echo Rik from SuperUser.com (Maximized Window Code Snippet)
@@ -157,6 +159,7 @@ echo 5and5 (FTG BO Map Source Example)
 echo Inferno Maartem (Creator of WaW FTG Map)
 echo patorjk.com (Ascii Art)
 echo ss64.com (Batch Command List)
+echo ribbitpoison (T5-MissingAssets)
 echo.
 type "End_Message.txt"
 echo.
