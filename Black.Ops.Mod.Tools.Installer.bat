@@ -32,6 +32,7 @@ echo Linker_mod
 echo Assets_wip_0.1.0
 echo Mod Tools Fixes 1-1.41_updated
 echo FTG Remastered BO map source example
+echo T5-MissingAssets
 echo SteamCMD
 echo Base game, Multiplayer, any dlc you own, and mod tools through steamcmd
 echo.
@@ -90,6 +91,7 @@ powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/atta
 powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/875995770296336434/End_Message.txt"
 powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/876022149473767494/BO_FTG_Map_Source.zip"
 powershell -Command "Start-BitsTransfer -Source "https://codeload.github.com/ribbitpoison/T5-MissingAssets/zip/refs/heads/main"
+rename main main.zip
 rem if %ans%==Steam (goto c)
 rem if %ans%==steam (goto c)
 if %ans%==Non-Steam (goto d)
