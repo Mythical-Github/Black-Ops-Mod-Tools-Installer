@@ -91,7 +91,7 @@ powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/atta
 powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/875995770296336434/End_Message.txt"
 powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/876022149473767494/BO_FTG_Map_Source.zip"
 powershell -Command "Start-BitsTransfer -Source "https://codeload.github.com/ribbitpoison/T5-MissingAssets/zip/refs/heads/main"
-rename main main.zip
+rename main T5-MissingAssets-main.zip
 rem if %ans%==Steam (goto c)
 rem if %ans%==steam (goto c)
 if %ans%==Non-Steam (goto d)
