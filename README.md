@@ -28,6 +28,8 @@ patorjk.com (Ascii Art)\
 ss64.com (Batch Command List)\
 ribbitpoison (T5-MissingAssets)
 
+My Server Link: discord.gg/EvUuAD4QvS\
+
 Linkermod Discord:\
 https://discord.gg/RMt88x3Js4
 
