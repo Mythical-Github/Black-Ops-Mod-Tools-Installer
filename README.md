@@ -26,7 +26,7 @@ Synthetic Programming (Youtube Coding Tutorial and Example Code)\
 Inferno Maartem (Creator of WaW FTG Map)\
 patorjk.com (Ascii Art)\
 ss64.com (Batch Command List)\
-ribbitpoison (T5-MissingAssets)
+ribbitpoison & FaberTheCatgirl (T5-MissingAssets)
 
 My Server Link:\
 https://discord.gg/EvUuAD4QvS
