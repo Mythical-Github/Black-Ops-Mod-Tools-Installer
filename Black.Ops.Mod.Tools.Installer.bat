@@ -32,7 +32,6 @@ echo Linker_mod
 echo Assets_wip_0.1.0
 echo Mod Tools Fixes 1-1.41_updated
 echo FTG Remastered BO map source example
-echo T5-MissingAssets
 echo SteamCMD
 echo Base game, Multiplayer, any dlc you own, and mod tools through steamcmd
 echo.
