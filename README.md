@@ -25,7 +25,7 @@ Synthetic Programming (Youtube Coding Tutorial and Example Code)\
 5and5 (FTG BO Map Source Example and Video Tutorial)\
 Inferno Maartem (Creator of WaW FTG Map)\
 patorjk.com (Ascii Art)\
-ss64.com (Batch Command List)\
+ss64.com (Batch Command List)
 
 My Server Link:\
 https://discord.gg/EvUuAD4QvS
