@@ -1,8 +1,19 @@
 @echo off
 color 0A
 Title Mythical's Black Ops Mod Tools Installer
+
+
+rem url list
+set self_updater_url="https://github.com/Mythical-Github/Black-Ops-Mod-Tools-Installer/releases/download/vStatic/Black.Ops.Mod.Tools.Installer.bat"
+set mod_tools_file_url="https://archive.org/download/black_ops_one_mod_tool_files/black_ops_one_mod_tool_files.zip"
+set game_mod_url="https://github.com/Nukem9/LinkerMod/releases/download/v1.3.2/game_mod.zip"
+set linker_mod_url="https://github.com/Nukem9/LinkerMod/releases/download/v1.0.0-r/LinkerMod-1.0.0.zip"
+set end_message_url="https://ia800201.us.archive.org/24/items/black_ops_mod_tools_installer_files/End_Message.txt"
+set steam_cmd_url="https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip"
+
+
 echo Checking for updates...
-powershell -Command "Start-BitsTransfer -Source "https://github.com/Mythical-Github/Black-Ops-Mod-Tools-Installer/releases/download/vStatic/Black.Ops.Mod.Tools.Installer.bat"
+powershell -Command "Start-BitsTransfer -Source "%self_updater_url%""
 cls
 if not "%1" == "max" start /MAX cmd /c %0 max & exit/b
 cd %~dp0
@@ -30,18 +41,12 @@ echo.
 echo Game_mod 
 echo Linker_mod
 echo Assets_wip_0.1.0
-echo Mod Tools Fixes 1-1.41_updated
+echo Ville's various mod tools fixes, the latest from Jan 2, 2024
 echo FTG Remastered BO map source example
 echo SteamCMD
-echo Base game, Multiplayer, any dlc you own, and mod tools through steamcmd
-echo.
 echo It will also run the setup.bat, converter, and clean up unneeded files
 echo.
 echo Important Notes:
-echo.
-echo The Steam method (uses steamcmd) is no longer available, you can self reactivate it if you'd like, but this is only for advanced users.
-echo The Non-Steam method is the reccomended method.
-echo You can use the Non-Steam method with an existing Steam Base Game, Multiplayer, and Mod Tools (any dlc you own will be autoinstalled).
 echo.
 echo Having Bgamer installed can replace key files, if you are having issues check this first
 echo.
@@ -53,7 +58,7 @@ echo Installing older mod fixes over this will likely cause problems.
 echo.
 echo The Launcher.exe must be ran as administrator or else errors may occur.
 echo.
-echo Your Install will approximately 14gb or less depending on dlc owned.
+echo Your Install will approximately 14gb or so depending on dlc owned.
 echo.
 echo If this window gets stuck, try clicking on it, then hitting enter.
 echo If that doesn't work close it and run it again.
@@ -62,19 +67,14 @@ echo Now to get started
 echo.
 
 :a
-rem echo Are you using Steam or Non-Steam?
 echo.
-set /p ans="Enter "Non-Steam" to continue:"
-rem set /p ans="Enter "Steam" or "Non-Steam":"
+set /p ans="Enter "yes" to continue:"
 echo.
-rem if %ans%==Steam (goto b)
-rem if %ans%==steam (goto b)
-if %ans%==Non-Steam (goto b)
-if %ans%==NonSteam (goto b)
-if %ans%==non-steam (goto b)
-if %ans%==nonsteam (goto b)
-echo Your input was something other than "Non-Steam"
-rem echo Your input was something other than "Steam" or "Non-Steam"
+if %ans%==Yes (goto b)
+if %ans%==yes (goto b)
+if %ans%==Y (goto b)
+if %ans%==y (goto b)
+echo Your input was something other than "yes"
 echo Try again.
 echo.
 goto a
@@ -82,34 +82,17 @@ goto a
 :b
 mkdir "Temp"
 cd "Temp"
-powershell -Command "Start-BitsTransfer -Source "https://github.com/Nukem9/LinkerMod/releases/download/v1.3.2/game_mod.zip"
-powershell -Command "Start-BitsTransfer -Source "https://github.com/Nukem9/LinkerMod/releases/download/v1.0.0-r/LinkerMod-1.0.0.zip"
-powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/873741090350583818/assets_wip_0.1.0.zip"
-powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/874819091700015155/CoD_BO_Mod_Tools_Fix_1-1.4.1_updated_part_1.zip"
-powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/874819090873724969/CoD_BO_Mod_Tools_Fix_1-1.4.1_updated_part_2.zip"
-powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/875995770296336434/End_Message.txt"
-powershell -Command "Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/868600140880023592/876022149473767494/BO_FTG_Map_Source.zip"
-rem if %ans%==Steam (goto c)
-rem if %ans%==steam (goto c)
+
+
+powershell -Command "Start-BitsTransfer -Source "%game_mod_url%""
+powershell -Command "Start-BitsTransfer -Source "%linker_mod_url%""
+powershell -Command "Start-BitsTransfer -Source "%mod_tools_file_url%""
+powershell -Command "Start-BitsTransfer -Source "%end_message_url%""
 if %ans%==Non-Steam (goto d)
 if %ans%==NonSteam (goto d)
 if %ans%==non-steam (goto d)
 if %ans%==nonsteam (goto d)
 
-:c
-echo Steam Method Chosen
-powershell -Command "Start-BitsTransfer -Source https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip
-powershell -Command "Expand-Archive -Force -LiteralPath steamcmd.zip"
-cd ".."
-set /p user="What is your steam username?":
-set /p pass="What is your steam password?":
-call "Temp/steamcmd/steamcmd.exe" +login "%user%" "%pass%" +force_install_dir "../.." +app_update 42700 verify +app_update 42710 verify +app_update 42740 verify +exit
-cd "Temp"
-powershell -Command "Expand-Archive -Force -LiteralPath game_mod.zip -DestinationPath "..""
-powershell -Command "Expand-Archive -Force -LiteralPath LinkerMod-1.0.0.zip -DestinationPath "..""
-cd ".."
-powershell -Command "Remove-Item -Force -Recurse "steamapps""
-goto e
 
 :d
 echo Non-Steam Method Chosen
@@ -124,10 +107,6 @@ cd ".."
 goto e
 
 :e
-rem start steam://rungameid/42700
-rem Timeout /T 45
-rem taskkill /f /im BlackOps.exe
-rem Timeout /T 15
 call BlackOps.exe
 Timeout /T 45
 taskkill /f /im BlackOps.exe
@@ -137,10 +116,7 @@ cd ".."
 call converter.exe -nopause -n -nospam
 cd ".."
 cd "Temp"
-powershell -Command "Expand-Archive -Force -LiteralPath assets_wip_0.1.0.zip -DestinationPath "..""
-powershell -Command "Expand-Archive -Force -LiteralPath CoD_BO_Mod_Tools_Fix_1-1.4.1_updated_part_1.zip -DestinationPath "..""
-powershell -Command "Expand-Archive -Force -LiteralPath CoD_BO_Mod_Tools_Fix_1-1.4.1_updated_part_2.zip -DestinationPath "..""
-powershell -Command "Expand-Archive -Force -LiteralPath BO_FTG_Map_Source.zip -DestinationPath "..""
+powershell -Command "Expand-Archive -Force -LiteralPath black_ops_one_mod_tool_files.zip -DestinationPath "..""
 echo.
 echo 	Credits:
 echo SE2Dev (Linker_Mod/Game_Mod/wip Asset Package)
@@ -163,3 +139,7 @@ echo.
 Timeout /T 30
 cd ".."
 powershell -Command "Remove-Item -Force -Recurse "Temp""
+
+pause
+
+exit /b
