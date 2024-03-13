@@ -1,5 +1,5 @@
 # Black-Ops-Mod-Tools-Installer
-Script to automate the install and setup of the Black Ops Mod Tools, their fixes, and more\
+Script to automate the setup of the Black Ops Mod Tools, their fixes, and more\
 Download and run the latest release from here:\
 https://github.com/Mythical-Github/Black-Ops-Mod-Tools-Installer/releases
 
