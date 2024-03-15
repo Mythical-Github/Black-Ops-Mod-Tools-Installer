@@ -62,7 +62,10 @@ echo Your Install will approximately 14gb or so depending on dlc owned.
 echo.
 echo If this window gets stuck, try clicking on it, then hitting enter.
 echo If that doesn't work close it and run it again.
-echo.
+echo
+echo If you haven't already placed this bat in your BO + Mod Tools install
+echo (next to your BlackOps.exe) close this window and do so before continuingv
+echo
 echo Now to get started
 echo.
 
@@ -83,33 +86,28 @@ goto a
 mkdir "Temp"
 cd "Temp"
 
-
 powershell -Command "Start-BitsTransfer -Source "%game_mod_url%""
 powershell -Command "Start-BitsTransfer -Source "%linker_mod_url%""
 powershell -Command "Start-BitsTransfer -Source "%mod_tools_file_url%""
 powershell -Command "Start-BitsTransfer -Source "%end_message_url%""
-if %ans%==Non-Steam (goto d)
-if %ans%==NonSteam (goto d)
-if %ans%==non-steam (goto d)
-if %ans%==nonsteam (goto d)
-
-
-:d
-echo Non-Steam Method Chosen
-echo.
-echo If you haven't already placed this bat in your BO + Mod Tools install
-echo (next to your BlackOps.exe) close this window and do so before continuing
-echo.
-pause
 powershell -Command "Expand-Archive -Force -LiteralPath game_mod.zip -DestinationPath "..""
 powershell -Command "Expand-Archive -Force -LiteralPath LinkerMod-1.0.0.zip -DestinationPath "..""
-cd ".."
-goto e
 
-:e
+cd ".."
+
 call BlackOps.exe
 Timeout /T 45
-taskkill /f /im BlackOps.exe
+
+set process_name=BlackOps.exe
+
+tasklist /FI "IMAGENAME eq %process_name%" 2>NUL | find /I "%process_name%">NUL
+if "%ERRORLEVEL%"=="0" (
+    taskkill /F /IM %process_name%
+) else (
+    echo %process_name% is not running.
+)
+
+
 cd "bin/scripts"
 call setup.bat
 cd ".."
