@@ -1,4 +1,3 @@
-
 @echo off
 color 0A
 Title Mythical's Black Ops Mod Tools Installer
@@ -21,7 +20,8 @@ if not "%1" == "max" start /MAX cmd /c %0 max & exit/b
 cd %~dp0
 
 set "game_dir=%CD%"
-set "temp_dir=%game_dir%/Temp"
+set "temp_dir="%game_dir%/Temp""
+
 
 cls
 echo.
@@ -86,9 +86,16 @@ echo.
 goto a
 
 :b
+
+echo Temp directory: %temp_dir%
 if not exist %temp_dir% (
     mkdir %temp_dir%
-) 
+    if errorlevel 1 (
+        echo Failed to create directory.
+        pause
+        exit /b
+    )
+)
 
 cd %temp_dir%
 
