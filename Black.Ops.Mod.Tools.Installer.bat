@@ -5,12 +5,12 @@ Title Mythical's Black Ops Mod Tools Installer
 
 rem url list
 set self_updater_url="https://github.com/Mythical-Github/Black-Ops-Mod-Tools-Installer/releases/download/vStatic/Black.Ops.Mod.Tools.Installer.bat"
-set mod_tools_file_url="https://archive.org/download/black_ops_one_mod_tool_files/black_ops_one_mod_tool_files.zip"
+set mod_tools_file_url="http://192.175.127.100:10060/black_ops_one_mod_tool_files.zip"
 set game_mod_url="https://github.com/Nukem9/LinkerMod/releases/download/v1.3.2/game_mod.zip"
 set linker_mod_url="https://github.com/Nukem9/LinkerMod/releases/download/v1.0.0-r/LinkerMod-1.0.0.zip"
 set end_message_url="https://ia800201.us.archive.org/24/items/black_ops_mod_tools_installer_files/End_Message.txt"
 set steam_cmd_url="https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip"
-set shippuden_map_maker_url="https://archive.org/download/black_ops_one_mod_tool_files/shippuden_map_maker.zip"
+set shippuden_map_maker_url="http://192.175.127.100:10060/shippuden_map_maker.zip"
 
 
 echo Checking for updates...
