@@ -136,7 +136,7 @@ def run_converter():
 
 
 def print_complete_message():
-    with open('End_Message.txt', 'r') as f:
+    with open(f'{temp_dir}/End_Message.txt', 'r') as f:
         print(f.read())
     print('\nInstallation complete. Exiting in 30 seconds...')
     time.sleep(30)
@@ -154,6 +154,7 @@ def close_game():
 
 def file_cleanup():
     try:
+        os.chdir(script_dir)
         shutil.rmtree(temp_dir)
     except Exception as e:
         print(f"Failed to remove temp directory: {e}")
@@ -168,8 +169,8 @@ def main():
     run_setup_bat()
     run_converter()
     extract_file_set_two()
-    file_cleanup()
     print_complete_message()
+    file_cleanup()
 
 
 if __name__ == '__main__':
