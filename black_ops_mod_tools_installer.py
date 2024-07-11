@@ -132,7 +132,7 @@ def run_setup_bat():
 
 def run_converter():
     converter_path = f'{script_dir}/bin/converter.exe'
-    subprocess.run(f'{converter_path} -nopause -n -nospam')
+    subprocess.run(f'{converter_path} -nopause -n -nospam', cwd=f'{script_dir}/bin')
 
 
 def print_complete_message():
