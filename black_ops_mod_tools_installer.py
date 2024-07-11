@@ -24,7 +24,7 @@ process_name = 'BlackOps.exe'
 
 
 if getattr(sys, 'frozen', False):
-    script_dir  = sys._MEIPASS
+    script_dir = os.path.dirname(sys.executable)
 else:
     script_dir  = os.path.dirname(os.path.abspath(__file__))
 
