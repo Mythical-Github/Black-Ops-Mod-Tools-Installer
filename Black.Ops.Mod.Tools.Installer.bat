@@ -5,12 +5,12 @@ Title Mythical's Black Ops Mod Tools Installer
 
 rem url list
 set self_updater_url="https://github.com/Mythical-Github/Black-Ops-Mod-Tools-Installer/releases/download/vStatic/Black.Ops.Mod.Tools.Installer.bat"
-set mod_tools_file_url="https://archive.org/download/black_ops_one_mod_tool_files/black_ops_one_mod_tool_files.zip"
+set "mod_tools_file_url=https://www.dropbox.com/scl/fi/fatp8vhnc6roed9iarc70/black_ops_one_mod_tool_files.zip?rlkey=eqgpda0ymp7bjr15laptbs8xu&st=sufknfp6&dl=1"
 set game_mod_url="https://github.com/Nukem9/LinkerMod/releases/download/v1.3.2/game_mod.zip"
 set linker_mod_url="https://github.com/Nukem9/LinkerMod/releases/download/v1.0.0-r/LinkerMod-1.0.0.zip"
 set end_message_url="https://ia800201.us.archive.org/24/items/black_ops_mod_tools_installer_files/End_Message.txt"
 set steam_cmd_url="https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip"
-set shippuden_map_maker_url="https://archive.org/download/black_ops_one_mod_tool_files/shippuden_map_maker.zip"
+set "shippuden_map_maker_url=https://www.dropbox.com/scl/fi/2p6b2cz0qrx016i1dk5r1/shippuden_map_maker.zip?rlkey=govvk420tcrjnaafygzcj81o5&st=1u148a0h&dl=1"
 
 
 echo Checking for updates...
@@ -99,14 +99,22 @@ if not exist %temp_dir% (
 
 cd %temp_dir%
 
+setlocal
+
+set "file1=black_ops_one_mod_tool_files.zip"
+set "file2=shippuden_map_maker.zip"
+
+curl -L -o "%file1%" "%mod_tools_file_url%""
+curl -L -o "%file2%" "%shippuden_map_maker_url%""
+
 powershell -Command "Start-BitsTransfer -Source "%game_mod_url%""
 powershell -Command "Start-BitsTransfer -Source "%linker_mod_url%""
-powershell -Command "Start-BitsTransfer -Source "%mod_tools_file_url%""
 powershell -Command "Start-BitsTransfer -Source "%end_message_url%""
-powershell -Command "Start-BitsTransfer -Source "%shippuden_map_maker_url%""
 
 powershell -Command "Expand-Archive -Force -LiteralPath game_mod.zip -DestinationPath "..""
 powershell -Command "Expand-Archive -Force -LiteralPath LinkerMod-1.0.0.zip -DestinationPath "..""
+
+endlocal
 
 cd ".."
 
