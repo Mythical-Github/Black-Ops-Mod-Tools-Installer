@@ -31,7 +31,6 @@ else:
 
 temp_dir = f'{script_dir}/temp'
 
-
 if not os.path.exists(temp_dir):
     os.makedirs(temp_dir)
 
@@ -121,38 +120,36 @@ def extract_file_set_one():
     extract_zip("LinkerMod-1.0.0.zip", script_dir)
 
 
-def extract_fileset_two():
+def extract_file_set_two():
     extract_zip('black_ops_one_mod_tool_files.zip', script_dir)
     extract_zip('shippuden_map_maker.zip', script_dir)
 
 
 def run_setup_bat():
     setup_bat_path = f'{script_dir}/bin/scripts/setup.bat'
-    subprocess.run(setup_bat_path, shell=True)
+    subprocess.run(setup_bat_path, cwd=os.path.dirname(setup_bat_path))
 
 
 def run_converter():
-    converter_path = f'{script_dir}/converter.exe'
-    subprocess.run(f'{converter_path} -nopause -n -nospam', shell=True)
+    converter_path = f'{script_dir}/bin/converter.exe'
+    subprocess.run(f'{converter_path} -nopause -n -nospam')
 
 
 def print_complete_message():
     with open('End_Message.txt', 'r') as f:
         print(f.read())
-
     print('\nInstallation complete. Exiting in 30 seconds...')
     time.sleep(30)
 
 
 def open_game():
     black_ops_path = f'{script_dir}/{process_name}'
-    
-    subprocess.run(black_ops_path, shell=True)
+    subprocess.run(black_ops_path)
     time.sleep(45)
 
 
 def close_game():
-    subprocess.run(f'taskkill /F /IM {process_name}', shell=True, stderr=subprocess.DEVNULL)
+    subprocess.run(f'taskkill /F /IM {process_name}')
 
 
 def file_cleanup():
@@ -167,7 +164,7 @@ def main():
     close_game()
     run_setup_bat()
     run_converter()
-    extract_fileset_two()
+    extract_file_set_two()
     file_cleanup()
     print_complete_message()
 
