@@ -153,8 +153,11 @@ def close_game():
 
 
 def file_cleanup():
-    shutil.rmtree(temp_dir)
-
+    try:
+        shutil.rmtree(temp_dir)
+    except Exception as e:
+        print(f"Failed to remove temp directory: {e}")
+    
 
 def main():
     print_intro()
